@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a NextJs auth with lucia project boilter plate.
+
+
+## Technologies Used
+
+-NextJs
+-Lucia (For password authentication)
+-Prisma
+-PostgresSql
+-Typescript
+-ShadcnUI
+-zod
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Create a .env file and DATABASE_URL=Give the database URL
+First, npm install then npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+# Folder and file Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+actions folder - where all the login, logout and register server actions are kept
+auth folder - Where login register pages are made
+settings folder - This is a setting page, you can make it homepage or dashboard or any kind of page
+component folder - where all the components are created
+  auth folder - where all our loging registers form are created
+  ui folder - where all our shadcn ui are downloaded and saved
+Data folder - Contains file that is going to query with our database
+lib folder
+  auth - setting up our connection with lucia and also validating to query the session 
+  db - where we are connecting with out prisma client 
+  utils - Only contains the cn function to merge classess provided by clsx and shadcn
+prisma folder- where our prisma schema is created
+providers folder - where we create context and share it accross  the files which currently contains sessionProvider
+schema folder - for our form schema validated with zod
+middleware.ts - where we are checking to see if users logged in to protect routes and redirecting accordingly
+routes.ts - to define our public, auth routes to be used on middleware
