@@ -1,4 +1,4 @@
-This is a NextJs auth with lucia project boilter plate.
+Created this nextjs auth boilerplate to be used on future when i need a basic auth system. 
 
 
 ## Technologies Used
@@ -38,3 +38,10 @@ providers folder - where we create context and share it accross  the files which
 schema folder - for our form schema validated with zod
 middleware.ts - where we are checking to see if users logged in to protect routes and redirecting accordingly
 routes.ts - to define our public, auth routes to be used on middleware
+
+
+## Future TODOS
+
+-Add Google and other oauth
+-Add forgot password
+-Add verify email
